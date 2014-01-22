@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.hudson.plugins.folder.Folder plugin="cloudbees-folder@4.0">
+  <actions/>
+  <description></description>
+  <properties>
+    <com.cloudbees.jenkins.plugins.foldersplus.SecurityGrantsFolderProperty plugin="cloudbees-folders-plus@2.5">
+      <securityGrants/>
+    </com.cloudbees.jenkins.plugins.foldersplus.SecurityGrantsFolderProperty>
+    <com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider_-FolderCredentialsProperty>
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap\$Hash">
+        <entry>
+          <com.cloudbees.plugins.credentials.domains.Domain plugin="credentials@1.9.4">
+            <specifications/>
+          </com.cloudbees.plugins.credentials.domains.Domain>
+          <java.util.concurrent.CopyOnWriteArrayList/>
+        </entry>
+      </domainCredentialsMap>
+    </com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider_-FolderCredentialsProperty>
+    <com.cloudbees.hudson.plugins.folder.properties.EnvVarsFolderProperty plugin="cloudbees-folders-plus@2.5">
+      <properties>githubProjectUrl=https://github.com/dominionenterprises/dmm-services-make-model/
+gitRepoUrl=git@github.com:dominionenterprises/dmm-services-make-model.git
+applicationName=dmm-services-make-model
+applicationPort=9005
+devHostNames=miscapp.dev.boats.local
+qaHostNames=miscapp.qa.boats.local</properties>
+    </com.cloudbees.hudson.plugins.folder.properties.EnvVarsFolderProperty>
+    <com.cloudbees.hudson.plugins.folder.properties.SubItemFilterProperty plugin="cloudbees-folders-plus@2.5"/>
+    <com.cloudbees.hudson.plugins.modeling.impl.folder.PropertyImpl plugin="cloudbees-template@4.3">
+      <instance>
+        <model>Web Services/Play Web Service Project</model>
+        <values>
+          <entry>
+            <string>devHostNames</string>
+            <string>miscapp.dev.boats.local</string>
+          </entry>
+          <entry>
+            <string>qaHostNames</string>
+            <string>miscapp.qa.boats.local</string>
+          </entry>
+          <entry>
+            <string>applicationName</string>
+            <string>dmm-services-make-model</string>
+          </entry>
+          <entry>
+            <string>name</string>
+            <string>Play Make-Model Web Service</string>
+          </entry>
+          <entry>
+            <string>applicationPort</string>
+            <string>9005</string>
+          </entry>
+          <entry>
+            <string>githubProjectUrl</string>
+            <string>https://github.com/dominionenterprises/dmm-services-make-model/</string>
+          </entry>
+          <entry>
+            <string>gitRepoUrl</string>
+            <string>git@github.com:dominionenterprises/dmm-services-make-model.git</string>
+          </entry>
+        </values>
+      </instance>
+    </com.cloudbees.hudson.plugins.modeling.impl.folder.PropertyImpl>
+  </properties>
+  <icon class="com.cloudbees.hudson.plugins.folder.icons.AggregateFolderIcon" plugin="cloudbees-folders-plus@2.5">
+    <folder reference="../.."/>
+    <baseName>folder</baseName>
+  </icon>
+  <views>
+    <hudson.model.ListView>
+      <owner class="com.cloudbees.hudson.plugins.folder.Folder" reference="../../.."/>
+      <name>All</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View\$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <com.cloudbees.plugins.deployer.DeployNowColumn plugin="cloudbees-deployer-plugin@4.18"/>
+        <jenkins.plugins.deployedoncolumn.DeployedOnColumn plugin="deployed-on-column@1.7"/>
+      </columns>
+      <includeRegex>.*</includeRegex>
+    </hudson.model.ListView>
+  </views>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <primaryView>All</primaryView>
+  <healthMetrics>
+    <com.cloudbees.hudson.plugins.folder.health.WorstChildHealthMetric/>
+    <com.cloudbees.hudson.plugins.folder.health.AverageChildHealthMetric plugin="cloudbees-folders-plus@2.5"/>
+    <com.cloudbees.hudson.plugins.folder.health.JobStatusHealthMetric plugin="cloudbees-folders-plus@2.5">
+      <success>true</success>
+      <failure>true</failure>
+      <unstable>true</unstable>
+      <unbuilt>true</unbuilt>
+      <countVirginJobs>false</countVirginJobs>
+    </com.cloudbees.hudson.plugins.folder.health.JobStatusHealthMetric>
+    <com.cloudbees.hudson.plugins.folder.health.ProjectEnabledHealthMetric plugin="cloudbees-folders-plus@2.5"/>
+  </healthMetrics>
+</com.cloudbees.hudson.plugins.folder.Folder>
