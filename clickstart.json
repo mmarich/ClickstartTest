@@ -1,0 +1,14 @@
+{
+    "id": "clickstart_test",
+    "name": "Clickstart Test",
+    "source": "git://github.com/mmarich/ClickstartTest.git",
+    "description" : "A rudimentary test for clickstart configuration.",
+    "icon" : "http://us.cdn2.123rf.com/168nwm/helgaknut/helgaknut1212/helgaknut121200002/16806612-shiny-ice-star-icon-on-white-background-eps-10.jpg",
+    "build-with-jenkins": {
+        "template": {
+            "type": "maven",
+            "options": {
+            }            
+        }
+    }
+}
